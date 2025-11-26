@@ -6,15 +6,13 @@ import { VisionSection } from '@/components/sections/VisionSection'
 import { ImpactStats } from '@/components/sections/ImpactStats'
 import { GrowthProjections } from '@/components/sections/GrowthProjections'
 import { EventsSection } from '@/components/sections/EventsSection'
-import { BenefitsSection } from '@/components/sections/BenefitsSection'
-import { MultimediaSection } from '@/components/sections/MultimediaSection'
-import { RadioSection } from '@/components/sections/RadioSection'
-import { DocumentsSection } from '@/components/sections/DocumentsSection'
-import { ContactSection } from '@/components/sections/ContactSection'
+import { FairModulesSection } from '@/components/sections/FairModulesSection'
+import { CursorEffect } from '@/components/animations'
 
 export default function Home() {
   return (
     <>
+      <CursorEffect />
       <Navbar />
       <main>
         <Hero />
@@ -23,11 +21,7 @@ export default function Home() {
         <ImpactStats />
         <GrowthProjections />
         <EventsSection />
-        <BenefitsSection />
-        <MultimediaSection />
-        <RadioSection />
-        <DocumentsSection />
-        <ContactSection />
+        <FairModulesSection />
       </main>
       <Footer />
     </>

@@ -4,11 +4,6 @@ const navLinks = [
   { href: '#', label: 'Inicio', active: true },
   { href: '#proyecto', label: 'Proyecto' },
   { href: '#eventos', label: 'Eventos' },
-  { href: '#beneficios', label: 'Beneficios' },
-  { href: '#multimedia', label: 'Multimedia' },
-  { href: '#radio', label: 'Radio' },
-  { href: '#documentos', label: 'Documentos' },
-  { href: '#contacto', label: 'Contacto' },
 ]
 
 export function Navbar() {

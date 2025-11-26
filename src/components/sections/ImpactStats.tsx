@@ -6,10 +6,10 @@ import { SectionTitle, SectionSubtitle } from '@/components/ui/SectionTitle'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations'
 
 const stats = [
-  { value: '$2.5M', label: 'Impacto Económico Anual', description: 'Generación directa e indirecta de ingresos', color: 'yellow' as const },
-  { value: '750+', label: 'Empleos Generados', description: 'Directos, indirectos e inducidos', color: 'purple' as const },
-  { value: '50M+', label: 'Alcance Digital', description: 'Impresiones anuales en redes sociales', color: 'pink' as const },
-  { value: '75K+', label: 'Visitantes Anuales', description: 'Turismo nacional e internacional', color: 'green' as const },
+  { value: '$100K+', label: 'Impacto Económico Anual', description: 'Generación directa e indirecta de ingresos', color: 'yellow' as const },
+  { value: '500+', label: 'Empleos Generados', description: 'Directos e indirectos', color: 'purple' as const },
+  { value: '50M', label: 'Alcance Digital', description: 'Impresiones en redes sociales', color: 'pink' as const },
+  { value: '100K', label: 'Visitantes Anuales', description: 'Proyección a 5 años', color: 'green' as const },
 ]
 
 export function ImpactStats() {
@@ -20,7 +20,7 @@ export function ImpactStats() {
       </FadeIn>
       <FadeIn delay={0.1}>
         <SectionSubtitle>
-          Análisis detallado del impacto económico, social y tecnológico que generará el ecosistema FMCC en Mendoza y Argentina, con proyecciones a 5 años basadas en estudios de mercado y benchmarks internacionales.
+          Análisis del impacto económico, social y digital que generará el ecosistema FMCC en Mendoza, con proyecciones a 5 años.
         </SectionSubtitle>
       </FadeIn>
 
@@ -36,19 +36,15 @@ export function ImpactStats() {
         <StaggerItem>
           <Card borderColor="cyan" title="">
             <h3 className="text-xl font-semibold text-cyan mb-4">Impacto Económico Detallado</h3>
-            <h4 className="font-semibold text-white mb-2">Ingresos Directos (Año 1-3)</h4>
+            <h4 className="font-semibold text-white mb-2">Ingresos Directos</h4>
             <ul className="space-y-1 text-muted-dark text-sm mb-4">
-              <li>• Sponsorships y partnerships: $800K USD</li>
-              <li>• Venta de entradas y merchandising: $400K USD</li>
-              <li>• Servicios de producción y estudio: $300K USD</li>
-              <li>• Programas de capacitación: $150K USD</li>
-              <li>• Licenciamiento y contenido: $200K USD</li>
+              <li>• Sponsorships y partners: $100K USD</li>
+              <li>• Venta de entradas: $250K USD</li>
             </ul>
             <h4 className="font-semibold text-white mb-2">Impacto Indirecto</h4>
             <ul className="space-y-1 text-muted-dark text-sm">
-              <li>• Turismo y hospitalidad: $650K USD</li>
-              <li>• Servicios profesionales: $300K USD</li>
-              <li>• Comercio local: $200K USD</li>
+              <li>• Turismo y hospitalidad: $50K USD</li>
+              <li>• Comercio local: $50K USD</li>
             </ul>
           </Card>
         </StaggerItem>
@@ -56,13 +52,14 @@ export function ImpactStats() {
         <StaggerItem>
           <Card borderColor="green" title="">
             <h3 className="text-xl font-semibold text-green-light mb-4">Generación de Empleo</h3>
-            <h4 className="font-semibold text-white mb-2">Empleos Directos (250+)</h4>
+            <h4 className="font-semibold text-white mb-2">Empleos Directos (350+)</h4>
             <ul className="space-y-1 text-muted-dark text-sm mb-4">
-              <li>• Equipo organizativo y gestión: 45 personas</li>
-              <li>• Técnicos y producción: 80 personas</li>
+              <li>• Equipo organizativo y gestión: 25 personas</li>
+              <li>• Técnicos y producción: 30 personas</li>
               <li>• Marketing y comunicación: 35 personas</li>
-              <li>• Servicios de apoyo: 60 personas</li>
+              <li>• Servicios de apoyo: 30 personas</li>
               <li>• Creadores residentes: 30 personas</li>
+              <li>• Creadores de contenido externos: 200 personas</li>
             </ul>
             <h4 className="font-semibold text-white mb-2">Empleos Indirectos (500+)</h4>
             <ul className="space-y-1 text-muted-dark text-sm">

@@ -20,11 +20,11 @@ export function VisionSection() {
               <div>
                 <h3 className="text-xl font-semibold text-yellow mb-6">Objetivos Estratégicos</h3>
                 <ul className="space-y-3 text-muted">
-                  <li>• Posicionar a Mendoza como capital latinoamericana de creación de contenido digital</li>
+                  <li>• Posicionar a Mendoza como referente nacional de creación de contenido digital</li>
                   <li>• Crear un ecosistema sostenible que beneficie a creadores, marcas y la economía local</li>
-                  <li>• Desarrollar infraestructura tecnológica de vanguardia para la industria del entretenimiento</li>
                   <li>• Fomentar la innovación y el emprendimiento en el sector digital</li>
-                  <li>• Generar oportunidades de empleo calificado para jóvenes profesionales</li>
+                  <li>• Generar oportunidades de empleo para jóvenes profesionales</li>
+                  <li>• Conectar creadores de contenido con marcas de manera directa</li>
                 </ul>
               </div>
             </FadeIn>
@@ -32,11 +32,11 @@ export function VisionSection() {
               <div>
                 <h3 className="text-xl font-semibold text-pink mb-6">Componentes del Ecosistema</h3>
                 <ul className="space-y-3 text-muted">
-                  <li>• Festival anual con alcance internacional y transmisión global</li>
-                  <li>• Hub permanente de creadores con facilidades de primer nivel</li>
-                  <li>• Programa de radicación con incentivos fiscales y económicos</li>
+                  <li>• Festival anual con alcance nacional</li>
+                  <li>• Hub de creadores para networking y colaboración</li>
                   <li>• Plataforma educativa para formación de nuevos talentos</li>
-                  <li>• Red de colaboración con marcas, sponsors y medios internacionales</li>
+                  <li>• Red de colaboración con marcas y sponsors</li>
+                  <li>• Creadores produciendo contenido para marcas del evento</li>
                 </ul>
               </div>
             </FadeIn>
