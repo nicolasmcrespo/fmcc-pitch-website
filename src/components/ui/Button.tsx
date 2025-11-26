@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 interface ButtonProps {
@@ -10,28 +11,31 @@ interface ButtonProps {
 }
 
 export function Button({ variant = 'primary', href, children, className }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold cursor-pointer transition-all duration-300 rounded-lg'
+  const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-lg'
 
   const variants = {
-    primary: 'bg-gradient-primary text-white px-8 py-3 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(139,92,246,0.3)]',
-    secondary: 'bg-transparent text-cyan border border-cyan px-8 py-3 hover:bg-cyan/10',
-    download: 'bg-gradient-purple text-white px-6 py-3',
-    contact: 'bg-gradient-purple text-white px-8 py-3.5',
+    primary: 'bg-gradient-primary text-white px-8 py-3 shadow-lg shadow-purple/25',
+    secondary: 'bg-transparent text-cyan border border-cyan px-8 py-3',
+    download: 'bg-gradient-purple text-white px-6 py-3 shadow-lg shadow-purple/25',
+    contact: 'bg-gradient-purple text-white px-8 py-3.5 shadow-lg shadow-purple/25',
   }
 
   const classes = cn(baseStyles, variants[variant], className)
 
-  if (href) {
-    return (
-      <a href={href} className={classes}>
-        {children}
-      </a>
-    )
-  }
+  const MotionComponent = href ? motion.a : motion.button
 
   return (
-    <button className={classes}>
+    <MotionComponent
+      href={href}
+      className={classes}
+      whileHover={{
+        scale: 1.05,
+        y: -2,
+      }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2, ease: 'easeOut' }}
+    >
       {children}
-    </button>
+    </MotionComponent>
   )
 }

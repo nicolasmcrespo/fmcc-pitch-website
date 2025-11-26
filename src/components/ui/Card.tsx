@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 type BorderColor = 'cyan' | 'blue' | 'yellow' | 'purple' | 'pink' | 'green'
@@ -16,6 +17,15 @@ interface CardProps {
   imageAlt?: string
 }
 
+const glowColors: Record<BorderColor, string> = {
+  cyan: 'hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]',
+  blue: 'hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]',
+  yellow: 'hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]',
+  purple: 'hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]',
+  pink: 'hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]',
+  green: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.3)]',
+}
+
 export function Card({
   borderColor,
   icon,
@@ -30,12 +40,15 @@ export function Card({
   const borderClass = `card-border-${borderColor}`
 
   return (
-    <div
+    <motion.div
       className={cn(
-        'relative overflow-hidden rounded-2xl bg-card-bg p-8',
+        'relative overflow-hidden rounded-2xl bg-card-bg p-8 transition-shadow duration-300',
         borderClass,
+        glowColors[borderColor],
         className
       )}
+      whileHover={{ y: -5, scale: 1.02 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       {imageUrl && (
         <img
@@ -57,6 +70,6 @@ export function Card({
         </ul>
       )}
       {children}
-    </div>
+    </motion.div>
   )
 }

@@ -2,6 +2,7 @@
 
 import { Card } from '@/components/ui/Card'
 import { SectionTitle, SectionSubtitle } from '@/components/ui/SectionTitle'
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations'
 
 const projectCards = [
   {
@@ -45,15 +46,21 @@ const projectCards = [
 export function ProjectOverview() {
   return (
     <section id="proyecto" className="py-20 px-8 max-w-7xl mx-auto">
-      <SectionTitle gradient="purple">El Proyecto FMCC</SectionTitle>
-      <SectionSubtitle>
-        Un ecosistema integral que conecta creadores, marcas y audiencias en el corazón de Argentina
-      </SectionSubtitle>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+      <FadeIn>
+        <SectionTitle gradient="purple">El Proyecto FMCC</SectionTitle>
+      </FadeIn>
+      <FadeIn delay={0.1}>
+        <SectionSubtitle>
+          Un ecosistema integral que conecta creadores, marcas y audiencias en el corazón de Argentina
+        </SectionSubtitle>
+      </FadeIn>
+      <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8" staggerDelay={0.15}>
         {projectCards.map((card) => (
-          <Card key={card.title} {...card} />
+          <StaggerItem key={card.title}>
+            <Card {...card} />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   )
 }
