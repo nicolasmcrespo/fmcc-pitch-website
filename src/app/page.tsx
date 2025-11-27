@@ -7,6 +7,7 @@ import { ImpactStats } from '@/components/sections/ImpactStats'
 import { GrowthProjections } from '@/components/sections/GrowthProjections'
 import { EventsSection } from '@/components/sections/EventsSection'
 import { FairModulesSection } from '@/components/sections/FairModulesSection'
+import { CursadoSection } from '@/components/sections/CursadoSection'
 import { CursorEffect } from '@/components/animations'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <EventsSection />
+        <CursadoSection />
         <ProjectOverview />
         <VisionSection />
         <ImpactStats />
