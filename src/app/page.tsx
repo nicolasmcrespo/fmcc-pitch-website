@@ -16,11 +16,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <EventsSection />
         <ProjectOverview />
         <VisionSection />
         <ImpactStats />
         <GrowthProjections />
-        <EventsSection />
         <FairModulesSection />
       </main>
       <Footer />
