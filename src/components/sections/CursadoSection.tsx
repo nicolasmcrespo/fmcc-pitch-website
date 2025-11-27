@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { SectionTitle, SectionSubtitle } from '@/components/ui/SectionTitle'
 import { FadeIn } from '@/components/animations'
 
@@ -112,7 +113,21 @@ const colorStyles: Record<string, { bg: string; border: string; glow: string; te
 
 export function CursadoSection() {
   return (
-    <section className="py-20 px-8 max-w-7xl mx-auto">
+    <section className="relative py-20 px-8 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/mendoza-vineyard.jpg"
+          alt="Viñedos de Mendoza"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
       <FadeIn>
         <SectionTitle gradient="purple">Contenido del Cursado</SectionTitle>
       </FadeIn>
@@ -208,6 +223,7 @@ export function CursadoSection() {
           </motion.div>
         </div>
       </FadeIn>
+      </div>
     </section>
   )
 }

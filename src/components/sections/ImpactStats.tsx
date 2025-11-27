@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { StatCard } from '@/components/ui/StatCard'
 import { Card } from '@/components/ui/Card'
 import { SectionTitle, SectionSubtitle } from '@/components/ui/SectionTitle'
@@ -14,7 +15,21 @@ const stats = [
 
 export function ImpactStats() {
   return (
-    <section className="py-20 px-8 max-w-7xl mx-auto">
+    <section className="relative py-20 px-8 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/mendoza-mountains.jpg"
+          alt="Montañas de Mendoza"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
       <FadeIn>
         <SectionTitle gradient="pink">Impacto Proyectado</SectionTitle>
       </FadeIn>
@@ -71,6 +86,7 @@ export function ImpactStats() {
           </Card>
         </StaggerItem>
       </StaggerContainer>
+      </div>
     </section>
   )
 }
