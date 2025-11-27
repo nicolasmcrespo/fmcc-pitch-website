@@ -8,6 +8,7 @@ import { GrowthProjections } from '@/components/sections/GrowthProjections'
 import { EventsSection } from '@/components/sections/EventsSection'
 import { FairModulesSection } from '@/components/sections/FairModulesSection'
 import { CursadoSection } from '@/components/sections/CursadoSection'
+import { ActividadesSection } from '@/components/sections/ActividadesSection'
 import { CursorEffect } from '@/components/animations'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <EventsSection />
         <CursadoSection />
+        <ActividadesSection />
         <ProjectOverview />
         <VisionSection />
         <ImpactStats />
